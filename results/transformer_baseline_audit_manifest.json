@@ -1,0 +1,10 @@
+{
+  "model": "SwinIR color denoising",
+  "weights": "data\\models\\swinir_color_noise25.pth",
+  "network_file": "data\\models\\swinir_minimal\\network_swinir.py",
+  "kodak_count": 24,
+  "sigma255": 25.0,
+  "seed": 0,
+  "command": "python experiments/run_swinir_audit.py --kodak-count 24",
+  "note": "Official SwinIR color denoising noise25 fixed-slice audit on Kodak24."
+}

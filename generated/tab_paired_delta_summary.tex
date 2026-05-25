@@ -1,0 +1,15 @@
+\begin{tabular}{llcccccc}
+\toprule
+Task & Comparison & Metric & Pairs & Mean signed $\Delta$ & 95\% bootstrap CI & Win (\%) & $p_{\rm sf}$ \\
+\midrule
+Kodak PSNR & ECTV-Cert-FDnCNN vs FDnCNN & PSNR & 216 & 0.000 & [0.000, 0.000] & -- & 1.000 \\
+Kodak PSNR & ECTV-Fidelity vs TV-Discrepancy & PSNR & 216 & 2.075 & [1.725, 2.453] & 85.2 & $<10^{-3}$ \\
+Kodak GradCorr & ECTV-Tight vs TV-NoBudget & Grad. corr. & 216 & -0.015 & [-0.018, -0.012] & 12.5 & $<10^{-3}$ \\
+PolyU PSNR & ECTV-Cert-FDnCNN vs FDnCNN & PSNR & 100 & -0.514 & [-0.574, -0.458] & 0.0 & $<10^{-3}$ \\
+PolyU PSNR & ECTV-Fidelity vs TV-Discrepancy & PSNR & 100 & -0.789 & [-0.924, -0.650] & 11.0 & $<10^{-3}$ \\
+Canny F1 & ECTV-Cert-FDnCNN vs Noisy & F1 & 10 & 0.234 & [0.111, 0.352] & 80.0 & 0.011 \\
+KLT EPE & ECTV-Cert-FDnCNN vs Noisy & KLT EPE & 70 & -0.562 & [-0.803, -0.345] & 41.4 & $<10^{-3}$ \\
+Farneback EPE & ECTV-Cert-FDnCNN vs Noisy & Flow EPE & 70 & -0.216 & [-0.272, -0.163] & 34.3 & $<10^{-3}$ \\
+JPEG PSNR & ECTV-Cert-FDnCNN vs Noisy & PSNR & 20 & 4.028 & [3.068, 4.954] & 100.0 & $<10^{-3}$ \\
+\bottomrule
+\end{tabular}

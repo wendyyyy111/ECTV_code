@@ -1,0 +1,15 @@
+\begin{tabular}{lcccccc}
+\toprule
+Ablation & Method & PSNR & SSIM & Grad. corr. & Iter. & Budget \\
+\midrule
+lambda\_sweep & ECTV-Tight & 25.269 & 0.536 & 0.863 & 7.750 & 0.188 \\
+mapping\_gamma & ECTV-Tight & 25.761 & 0.572 & 0.876 & 9.667 & 0.205 \\
+p\_sweep & ECTV-Tight & 24.117 & 0.507 & 0.857 & 9.333 & 0.141 \\
+stopping & ECTV-budget & 25.504 & 0.548 & 0.868 & 5.000 & 0.188 \\
+stopping & TV-Chambolle-Val & 28.575 & 0.741 & 0.894 & 0.000 & -- \\
+stopping & TV-Discrepancy & 28.408 & 0.710 & 0.920 & 21.333 & -- \\
+stopping & TV-FixedK-Val & 28.459 & 0.713 & 0.920 & 40.000 & -- \\
+stopping & TV-NoBudget & 28.408 & 0.710 & 0.920 & 21.333 & -- \\
+stopping & TV-Oracle & 28.459 & 0.713 & 0.920 & 53.333 & -- \\
+\bottomrule
+\end{tabular}

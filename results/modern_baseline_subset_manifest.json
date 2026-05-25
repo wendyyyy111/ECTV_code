@@ -1,0 +1,16 @@
+{
+  "model": "DRUNet color",
+  "weights": "data\\models\\drunet_color.pth",
+  "kair_minimal_files": [
+    "data\\models\\kair_minimal\\network_unet.py",
+    "data\\models\\kair_minimal\\basicblock.py"
+  ],
+  "kodak_count": 24,
+  "poly_count": 100,
+  "command": "python experiments/run_drunet_subset.py --kodak-count 24 --poly-count 100",
+  "torch_dependency_paths": [
+    "D:\\codex\u5230\u670d\u52a1\u5668\u5171\u4eab\u6587\u4ef6\u5939\\Total_Variation_Denoising_TMM_Project\\.ectv_pydeps_torch",
+    "\\home\\fuyue\\.cache\\ectv_pydeps_torch"
+  ],
+  "note": "CPU fixed-slice DRUNet audit: Kodak24 at sigma=25 and seed=0 plus the selected PolyU real-noise pairs."
+}

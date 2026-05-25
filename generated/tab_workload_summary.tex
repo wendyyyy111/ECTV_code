@@ -1,0 +1,12 @@
+\begin{tabular}{lccc}
+\toprule
+Experiment & Cases & Protocol & Method evals \\
+\midrule
+Synthetic Kodak color & 24 & 3 noise levels $\times$ 3 seeds & 3456 \\
+PolyU real camera & 100 & blind sigma estimate & 1600 \\
+Frame sequence & 8 & 8 translated frames & 128 \\
+Registration & 20 & ORB/SIFT known translation, $\sigma=[25, 50]$ & 280 \\
+Tracking/flow & 70 & KLT/Farneback EPE, $\sigma=[20, 50]$ & 980 \\
+JPEG RD & 20 & 5 qualities & 280 \\
+\bottomrule
+\end{tabular}

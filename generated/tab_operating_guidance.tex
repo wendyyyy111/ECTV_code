@@ -1,0 +1,11 @@
+\begin{tabular}{p{0.25\textwidth}p{0.30\textwidth}p{0.36\textwidth}}
+\toprule
+Audit observation & Interpretation & Recommended action \\
+\midrule
+High pass-through, $\eta\approx1$ & Proposal already satisfies the removed-TV budget. & Admit the proposal and report the certificate as an audit tag. \\
+Very low $\eta$ & The budget conflicts with the proposal. & Relax or task-calibrate the budget for fidelity-oriented restoration. \\
+Dense motion prefers noisy input & TV removal can erase cues used by KLT or flow. & Select the operating point on the target motion operator. \\
+Feature/edge/JPEG metrics improve & Moderate denoising can help sparse geometry, contours, or coding. & Use the certified operating point after task-level validation. \\
+$\Delta_Q\ge\TV(f)$ & The certificate becomes permissive. & Report TV ratio and removed/budget with the certificate. \\
+\bottomrule
+\end{tabular}

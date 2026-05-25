@@ -1,0 +1,138 @@
+{
+  "timestamp": "2026-05-22 16:59:46",
+  "datasets": {
+    "kodak24_downloaded_or_available": 24,
+    "legacy_calibration_images": 4,
+    "polyu_pairs": 100,
+    "polyu_source": "polyu_full"
+  },
+  "methods": [
+    "noisy",
+    "tv_maxiter",
+    "tv_fixedk_val",
+    "tv_discrepancy",
+    "tv_chambolle_val",
+    "ectv",
+    "ectv_fidelity",
+    "gaussian_val",
+    "median_val",
+    "bilateral_val",
+    "pm_diff_val",
+    "wavelet_bayes",
+    "nlm",
+    "bm3d",
+    "fdncnn_color",
+    "ectv_fdncnn"
+  ],
+  "parameters": {
+    "quick": false,
+    "max_iter": 80
+  },
+  "baseline_config": {
+    "tv_fixedk": 40,
+    "tv_chambolle_scale": 1.0,
+    "gaussian_sigma": 1.0,
+    "median_kernel": 5,
+    "bilateral_color_scale": 0.75,
+    "bilateral_spatial": 3,
+    "pm_iterations": 5,
+    "pm_kappa_scale": 4.0,
+    "calibration_source": "Lena,Baboon,Barbara,Peppers",
+    "ectv_gamma_low": 0.04,
+    "ectv_gamma_high": 0.32,
+    "ectv_fidelity_low_lam": 0.08,
+    "ectv_fidelity_low_alpha": 0.3333333333333333,
+    "ectv_fidelity_mid_lam": 0.12,
+    "ectv_fidelity_mid_alpha": 0.3333333333333333,
+    "ectv_fidelity_high_lam": 0.25,
+    "ectv_fidelity_high_alpha": 0.75
+  },
+  "reproducibility": {
+    "command": "python experiments/run_tmm_pipeline.py --max-iter 80",
+    "python": "3.10.2",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
+    "opencv": "4.13.0",
+    "sift_available": true,
+    "bm3d_available": true,
+    "h5py_available": true,
+    "fdncnn_color_available": true,
+    "fdncnn_color_model": "data\\models\\FDnCNN_color.mat",
+    "synthetic_sigmas_255": [
+      15,
+      25,
+      50
+    ],
+    "synthetic_seeds": [
+      0,
+      1,
+      2
+    ],
+    "resize_max_side": 256,
+    "ectv_lambda": 0.08,
+    "ectv_max_iter": 80,
+    "p_tau": 0.09803921568627451,
+    "p_rho": 2.0,
+    "p_min": 0.501,
+    "budget_alpha": 0.3333333333333333,
+    "budget_gamma_structure": 0.04,
+    "budget_gamma_fidelity": 0.32,
+    "ectv_fidelity_low_lam_alpha": [
+      0.08,
+      0.3333333333333333
+    ],
+    "ectv_fidelity_mid_lam_alpha": [
+      0.12,
+      0.3333333333333333
+    ],
+    "ectv_fidelity_high_lam_alpha": [
+      0.25,
+      0.75
+    ],
+    "nlm_patch_size": 5,
+    "nlm_patch_distance": 6,
+    "nlm_h_scale": 0.85,
+    "pm_iterations": 5,
+    "pm_kappa_scale": 4.0,
+    "edge_canny_sigma": 1.0,
+    "edge_canny_low": 0.1,
+    "edge_canny_high": 0.2,
+    "edge_tolerance_px": [
+      1,
+      2
+    ],
+    "downstream_feature_edge_sigmas_255": [
+      25,
+      50
+    ],
+    "downstream_tracking_sigmas_255": [
+      20,
+      50
+    ],
+    "jpeg_qualities": [
+      10,
+      20,
+      30,
+      50,
+      70
+    ],
+    "tracking_sequence_frames": 8,
+    "tracking_step_dx_dy": [
+      2.0,
+      1.0
+    ]
+  },
+  "notes": [
+    "Kodak images are downloaded from r0k.us when reachable.",
+    "Legacy local images are used only for baseline calibration when available; Kodak24 is the synthetic test set.",
+    "Processed Kodak and PolyU caches are used when present; otherwise Kodak is downloaded and PolyU is prepared from local raw files or fallback project crops.",
+    "BM3D-RGB is reported only when the optional bm3d Python package imports successfully.",
+    "FDnCNN-Color is reported in image, sequence, and downstream tables when h5py and the official FDnCNN_color.mat model are available.",
+    "ECTV-Cert-FDnCNN certifies the FDnCNN-Color proposal with the ECTV-Fidelity removed-TV budget and projects it to the budget boundary when needed.",
+    "Synthetic sequence is generated from image translations for controlled multimedia pipeline testing.",
+    "Edge extraction is a fixed Canny consistency proxy against clean-image Canny pseudo-references.",
+    "Feature registration evaluates ORB and SIFT when available using known translated pairs at two noise levels and corner reprojection error.",
+    "Tracking/flow evaluates KLT and Farneback endpoint error on known translated sequences at two noise levels.",
+    "Ablation rows are generated from a fixed subset and written to results/ablation.csv."
+  ]
+}

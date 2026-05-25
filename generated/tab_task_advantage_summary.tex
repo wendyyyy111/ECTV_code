@@ -1,0 +1,15 @@
+\begin{tabular}{lp{0.16\textwidth}ccccc}
+\toprule
+Pipeline & Metric & Noisy & ECTV-S & ECTV-F & ECTV-L & Best \\
+\midrule
+ORB registration & Inliers $\uparrow$ & 132.700 & 130.600 & 89.200 & 103.600 & Noisy (132.700) \\
+ORB registration & Corner err. $\downarrow$ & 6.439 & 7.014 & 5.823 & 4.313 & ECTV-Cert-FDnCNN (4.313) \\
+SIFT registration & Inliers $\uparrow$ & 57.500 & 69.800 & 62.200 & 72.900 & PM-Diff-Val (75.300) \\
+SIFT registration & Corner err. $\downarrow$ & 14.741 & 13.462 & 17.918 & 1.544 & ECTV-Cert-FDnCNN (1.544) \\
+Canny edges & F1-1px $\uparrow$ & 0.599 & 0.655 & 0.687 & 0.833 & ECTV-Cert-FDnCNN (0.833) \\
+Canny edges & Recall $\uparrow$ & 0.948 & 0.913 & 0.555 & 0.753 & Noisy (0.948) \\
+KLT tracking & EPE $\downarrow$ & 0.535 & 0.560 & 1.262 & 1.097 & Noisy (0.535) \\
+Farneback flow & EPE $\downarrow$ & 0.426 & 0.448 & 0.720 & 0.642 & Noisy (0.426) \\
+JPEG compression & JPEG PSNR $\uparrow$ & 24.408 & 26.850 & 27.431 & 28.436 & ECTV-Cert-FDnCNN (28.436) \\
+\bottomrule
+\end{tabular}

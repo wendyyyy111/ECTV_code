@@ -1,0 +1,22 @@
+\begin{tabular}{lp{0.22\textwidth}p{0.55\textwidth}}
+\toprule
+Method & Implementation & Parameter rule / role \\
+\midrule
+Noisy & Input & No denoising \\
+TV-NoBudget & ECTV solver & TV evolution with budget stopping disabled \\
+TV-FixedK-Val & ECTV solver & Fixed iteration count selected on calibration images \\
+TV-Discrepancy & ECTV solver & Stop when residual MSE reaches the estimated noise variance \\
+TV-Chambolle-Val & scikit-image & ROF/TV-Chambolle weight selected on calibration images \\
+ECTV-Tight & Proposed & Tight removed-TV budget preset with conservative sensitivity \\
+ECTV-Fidelity & Proposed & Fidelity-oriented budget preset with calibration-selected lambda/alpha by noise regime \\
+Gaussian-Val & OpenCV & Gaussian blur sigma selected on calibration images \\
+Median-Val & OpenCV & Median kernel selected on calibration images \\
+Bilateral-Val & scikit-image & Bilateral parameters selected on calibration images \\
+PM-Diff-Val & NumPy/OpenCV & Perona-Malik iterations and conductance selected on calibration images \\
+Wavelet-Bayes & scikit-image & BayesShrink wavelet denoising \\
+NLM & scikit-image & Non-local means with estimated sigma \\
+BM3D-RGB & bm3d package & Color BM3D when RGB input is provided \\
+FDnCNN-Color & Official DnCNN/FDnCNN weights & Color CNN denoiser with noise-level input \\
+ECTV-Cert-FDnCNN & Proposed certificate wrapper & FDnCNN-Color proposal accepted or projected to the ECTV-Fidelity removed-TV budget \\
+\bottomrule
+\end{tabular}

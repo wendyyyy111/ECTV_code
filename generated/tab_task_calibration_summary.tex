@@ -1,0 +1,12 @@
+\begin{tabular}{lp{0.14\textwidth}cp{0.25\textwidth}cccc}
+\toprule
+Pipeline & Metric & Folds & LOO selected methods & Held-out selector & Noisy & Cert-FDnCNN & Oracle \\
+\midrule
+ORB registration & Corner err. $\downarrow$ & 5 & ECTV-Cert-FDnCNN:5 & 4.313 & 6.439 & 4.313 & 3.615 \\
+SIFT registration & Corner err. $\downarrow$ & 5 & ECTV-Cert-FDnCNN:5 & 1.544 & 14.741 & 1.544 & 1.544 \\
+Canny edges & F1-1px $\uparrow$ & 5 & ECTV-Cert-FDnCNN:5 & 0.833 & 0.599 & 0.833 & 0.837 \\
+KLT tracking & EPE $\downarrow$ & 5 & Noisy:5 & 0.535 & 0.535 & 1.097 & 0.532 \\
+Farneback flow & EPE $\downarrow$ & 5 & Noisy:5 & 0.426 & 0.426 & 0.642 & 0.420 \\
+JPEG compression & Decoded PSNR $\uparrow$ & 4 & ECTV-Cert-FDnCNN:4 & 28.436 & 24.408 & 28.436 & 28.436 \\
+\bottomrule
+\end{tabular}

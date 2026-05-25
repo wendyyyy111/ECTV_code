@@ -1,0 +1,12 @@
+\begin{tabular}{lp{0.17\textwidth}p{0.19\textwidth}p{0.18\textwidth}p{0.28\textwidth}}
+\toprule
+Pipeline & Calibration metric & Task-selected point & Best observed & Deployment action \\
+\midrule
+ORB registration & Corner err. $\downarrow$ & ECTV-Cert-FDnCNN (4.313) & ECTV-Cert-FDnCNN (4.313) & Use certified learned output for sparse geometry. \\
+SIFT registration & Corner err. $\downarrow$ & ECTV-Cert-FDnCNN (1.544) & ECTV-Cert-FDnCNN (1.544) & Use certified learned output for sparse geometry. \\
+Canny edges & F1-1px $\uparrow$ & ECTV-Cert-FDnCNN (0.833) & ECTV-Cert-FDnCNN (0.833) & Use certified learned output for contour precision/recall balance. \\
+KLT tracking & EPE $\downarrow$ & Noisy (0.535) & Noisy (0.535) & Bypass denoising or recalibrate for this operator. \\
+Farneback flow & EPE $\downarrow$ & Noisy (0.426) & Noisy (0.426) & Bypass denoising or recalibrate for this operator. \\
+JPEG compression & Decoded PSNR $\uparrow$ & ECTV-Cert-FDnCNN (28.436) & ECTV-Cert-FDnCNN (28.436) & Use certified learned output before coding. \\
+\bottomrule
+\end{tabular}

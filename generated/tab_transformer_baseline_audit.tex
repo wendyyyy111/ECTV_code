@@ -1,0 +1,13 @@
+\begin{tabular}{lccccccccc}
+\toprule
+Method & Cases & PSNR & SSIM & Grad. corr. & Removed/Budget & Kept (\%) & Proj. (\%) & Med. $\eta$ & Runtime (s) \\
+\midrule
+Noisy & 24 & 20.396 & 0.3889 & 0.8641 & -- & -- & -- & -- & 0.00 \\
+FDnCNN-Color & 24 & 31.165 & 0.8805 & 0.9659 & -- & -- & -- & -- & 1.21 \\
+DRUNet-Color & 24 & 31.795 & 0.8937 & 0.9697 & -- & -- & -- & -- & 0.40 \\
+SwinIR-Color & 24 & 31.922 & 0.8957 & 0.9708 & -- & -- & -- & -- & 11.77 \\
+ECTV-Cert-FDnCNN & 24 & 31.165 & 0.8805 & 0.9659 & 0.809 & 100.0 & 0.0 & 1.0000 & 1.21 \\
+ECTV-Cert-DRUNet & 24 & 31.795 & 0.8937 & 0.9697 & 0.808 & 100.0 & 0.0 & 1.0000 & 0.40 \\
+ECTV-Cert-SwinIR & 24 & 31.922 & 0.8957 & 0.9708 & 0.804 & 100.0 & 0.0 & 1.0000 & 11.78 \\
+\bottomrule
+\end{tabular}

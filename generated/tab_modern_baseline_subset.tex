@@ -1,0 +1,16 @@
+\begin{tabular}{llcccccccccc}
+\toprule
+Dataset & Method & Cases & PSNR & SSIM & Grad. corr. & Removed/Budget & Kept (\%) & Proj. (\%) & No-op (\%) & Med. $\eta$ & Runtime (s) \\
+\midrule
+Kodak24 slice & Noisy & 24 & 20.396 & 0.3889 & 0.8641 & -- & -- & -- & -- & -- & 0.00 \\
+Kodak24 slice & FDnCNN-Color & 24 & 31.165 & 0.8805 & 0.9659 & -- & -- & -- & -- & -- & 1.21 \\
+Kodak24 slice & DRUNet-Color & 24 & 31.795 & 0.8937 & 0.9697 & -- & -- & -- & -- & -- & 0.40 \\
+Kodak24 slice & ECTV-Cert-FDnCNN & 24 & 31.165 & 0.8805 & 0.9659 & 0.809 & 100.0 & 0.0 & 0.0 & 1.0000 & 1.21 \\
+Kodak24 slice & ECTV-Cert-DRUNet & 24 & 31.795 & 0.8937 & 0.9697 & 0.808 & 100.0 & 0.0 & 0.0 & 1.0000 & 0.40 \\
+PolyU100 audit & Noisy & 100 & 37.984 & 0.9471 & 0.9833 & -- & -- & -- & -- & -- & 0.00 \\
+PolyU100 audit & FDnCNN-Color & 100 & 38.502 & 0.9579 & 0.9850 & -- & -- & -- & -- & -- & 1.96 \\
+PolyU100 audit & DRUNet-Color & 100 & 38.414 & 0.9557 & 0.9848 & -- & -- & -- & -- & -- & 0.60 \\
+PolyU100 audit & ECTV-Cert-FDnCNN & 100 & 37.988 & 0.9472 & 0.9833 & 0.999 & 0.0 & 100.0 & 0.0 & 0.0038 & 2.00 \\
+PolyU100 audit & ECTV-Cert-DRUNet & 100 & 37.988 & 0.9472 & 0.9833 & 0.999 & 0.0 & 100.0 & 0.0 & 0.0043 & 0.63 \\
+\bottomrule
+\end{tabular}
